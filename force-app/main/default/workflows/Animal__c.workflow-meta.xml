@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>RemoveDate</fullName>
+        <field>dateasdasd__c</field>
+        <name>RemoveDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>asdFalse</fullName>
+        <description>uncheck asd</description>
+        <field>asd__c</field>
+        <literalValue>0</literalValue>
+        <name>asdFalse</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>qweFalse</fullName>
+        <description>make qwe uncheck</description>
+        <field>qwe__c</field>
+        <literalValue>0</literalValue>
+        <name>qweFalse</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>AnimalDateEmptyAsdQwe</fullName>
+        <actions>
+            <name>asdFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>qweFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>if date is selected, uncheck both fields asd and qwe</description>
+        <formula>!ISBLANK(dateasdasd__c )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>removeDateIfAsdIsChecked</fullName>
+        <actions>
+            <name>RemoveDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>if asd/qwe is checked while date is filled, 
+remove date and keep asd/qwe</description>
+        <formula>IF(!ISBLANK(dateasdasd__c ), OR( asd__c == True,  qwe__c == True),True)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
