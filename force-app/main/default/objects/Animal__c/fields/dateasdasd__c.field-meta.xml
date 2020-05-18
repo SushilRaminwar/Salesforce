@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dateasdasd__c</fullName>
+    <description>if entered, the checkboxe qwe and asd should get removed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>selecting date will set the selected LT/3RD PARTY to false.
+and have to contact admin in case you wanted it to revert back.</inlineHelpText>
+    <label>dateasdasd</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

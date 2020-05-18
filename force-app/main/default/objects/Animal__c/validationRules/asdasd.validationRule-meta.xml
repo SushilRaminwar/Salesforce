@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>asdasd</fullName>
+    <active>true</active>
+    <description>if qwe is selected then you cannot select asd.</description>
+    <errorConditionFormula>qwe__c  = True  &amp;&amp;  asd__c = True</errorConditionFormula>
+    <errorDisplayField>asd__c</errorDisplayField>
+    <errorMessage>can only select 1</errorMessage>
+</ValidationRule>

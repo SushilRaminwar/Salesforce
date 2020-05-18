@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dateCheckboxConfict1</fullName>
+    <active>false</active>
+    <description>cant select checkbox(qwe) if date is not null</description>
+    <errorConditionFormula>(qwe__c = True &amp;&amp; !ISBLANK(dateasdasd__c ))</errorConditionFormula>
+    <errorMessage>cant select qwe while date is not empty</errorMessage>
+</ValidationRule>
