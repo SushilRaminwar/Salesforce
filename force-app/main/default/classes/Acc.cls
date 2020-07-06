@@ -6,10 +6,6 @@ public class Acc {
         
         while(counter <= value){
             //display the current counter value
-            //display the current counter value
-            //display the current counter value
-            //display the current counter value
-            //display the current counter value
             System.debug('Counter Value before Incrementing ' + counter);
             
             //create a new account
